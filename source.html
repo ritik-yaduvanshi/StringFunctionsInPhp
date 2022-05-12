@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SourceCode</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .head{
+            background-color :#1abc9c;
+            text-align : center;
+            padding:30px;
+        }
+        .topnav{
+            overflow:hidden;
+            background-color: black;
+        }
+        .topnav a{
+            float : left;
+            display : block;
+            color: #f2f2f2;
+            text-align : center;
+            padding : 14px 16px;
+            text-decoration : none;
+        }
+        .topnav a:hover{
+            background-color : #ddd;
+            color : black;
+        }
+        @media screen and (max-width : 600px) {
+            .topnav a{
+                float : none;
+                width : 100%;
+            }
+        
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #1abc9c;
+            margin-top: 100px;
+            color:#ddd;
+            padding:30px;
+
+        }
+        .footer p{
+            color:black;
+        }
+        .midrow{
+            margin-top:50px;
+        }
+        table{
+            background-color: black;
+            color:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Assignment : String Functions!</h1>
+        <p><em>"This Page is Showing Source Code of the String Functions in PHP!"</em></p>
+    </div>
+    <div class="topnav">
+        <a href ="Assignment5.php">Home</a>
+        <a href ="#">Source Code</a>
+        <a href="">GitHub</a>
+    </div>
+    <center><h2>"Source Code"</h2></center>
+    <hr width="75%">;
+    <div class="midrow">
+        <table border="1" style="border-collapse: collapse; width: 100%;">
+            <tbody>
+            <tr>
+            <td style="width: 100%;">
+            <div>
+            <div><span>&lt;!</span><span>DOCTYPE</span><span> </span><span>html</span><span>&gt;</span></div>
+            <div><span>&lt;</span><span>html</span><span> </span><span>lang</span><span>=</span><span>"en"</span><span>&gt;</span></div>
+            <div><span>&lt;</span><span>head</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>meta</span><span> </span><span>charset</span><span>=</span><span>"UTF-8"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>meta</span><span> </span><span>http-equiv</span><span>=</span><span>"X-UA-Compatible"</span><span> </span><span>content</span><span>=</span><span>"IE=edge"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>meta</span><span> </span><span>name</span><span>=</span><span>"viewport"</span><span> </span><span>content</span><span>=</span><span>"width=device-width, initial-scale=1.0"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>title</span><span>&gt;</span><span>StringFunctions</span><span>&lt;/</span><span>title</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>style</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>*</span><span> {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>box-sizing</span><span>: </span><span>border-box</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.head</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span> :#1abc9c;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text-align</span><span> : </span><span>center</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>padding</span><span>:</span><span>30</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.topnav</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>overflow</span><span>:</span><span>hidden</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span>: </span><span>black</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.topnav</span><span> </span><span>a</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>float</span><span> : </span><span>left</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>display</span><span> : </span><span>block</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>color</span><span>: #f2f2f2;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text-align</span><span> : </span><span>center</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>padding</span><span> : </span><span>14</span><span>px</span><span> </span><span>16</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text-decoration</span><span> : </span><span>none</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.topnav</span><span> </span><span>a</span><span>:hover</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span> : #ddd;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>color</span><span> : </span><span>black</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>@media</span><span> </span><span>screen</span><span> </span><span>and</span><span> (</span><span>max-width</span><span> : </span><span>600</span><span>px</span><span>) {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>.topnav</span><span> </span><span>a</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>float</span><span> : </span><span>none</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span><span> : </span><span>100</span><span>%</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.footer</span><span> {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>padding</span><span>: </span><span>20</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text-align</span><span>: </span><span>center</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span>: #1abc9c;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>margin-top</span><span>: </span><span>100</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>color</span><span>:#ddd;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>padding</span><span>:</span><span>30</span><span>px</span><span>;</span></div>
+            <br />
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>@media</span><span> </span><span>screen</span><span> </span><span>and</span><span> (</span><span>max-width</span><span>:</span><span>600</span><span>px</span><span>){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>.leftboxes</span><span>,</span><span>.midboxes</span><span>,</span><span>.rightboxes</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>float</span><span> : </span><span>none</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span><span> : </span><span>100</span><span>%</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.leftboxes</span><span> ,</span><span>.midboxes</span><span>,</span><span>.rightboxes</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>float</span><span>:</span><span>left</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>overflow</span><span>:</span><span>hidden</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>display</span><span>:</span><span>block</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span><span>:</span><span>33</span><span>%</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>padding-left</span><span>:</span><span>20</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.row</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>text-align</span><span>:</span><span>center</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>margin-top</span><span>:</span><span>50</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.leftboxes</span><span> </span><span>input</span><span>,</span><span>.midboxes</span><span> </span><span>input</span><span>,</span><span>.rightboxes</span><span> </span><span>input</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>margin-top</span><span>:</span><span>10</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span><span> : </span><span>50</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span>:#1abc9c;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>border-radius</span><span>:</span><span>5</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>width</span><span>:</span><span>100</span><span>%</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.leftboxes</span><span> </span><span>input</span><span>:hover</span><span>,</span><span>.midboxes</span><span> </span><span>input</span><span>:hover</span><span>,</span><span>.rightboxes</span><span> </span><span>input</span><span>:hover</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span>:</span><span>black</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>color</span><span>:</span><span>white</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.midrow</span><span> </span><span>input</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background-color</span><span>:</span><span>white</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>height</span><span>:</span><span>40</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>border-radius</span><span>:</span><span>4</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.midrow</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>margin-top</span><span>:</span><span>300</span><span>px</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.midrow</span><span> </span><span>table</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>background</span><span>:#1abc9c;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>border</span><span>: </span><span>1</span><span>px</span><span> </span><span>solid</span><span> </span><span>black</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>margin</span><span>:</span><span>auto</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>.footer</span><span> </span><span>p</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>color</span><span>:</span><span>black</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>style</span><span>&gt;</span></div>
+            <div><span>&lt;/</span><span>head</span><span>&gt;</span></div>
+            <div><span>&lt;</span><span>body</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"head"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>h1</span><span>&gt;</span><span>Assignment : String Functions!</span><span>&lt;/</span><span>h1</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>p</span><span>&gt;&lt;</span><span>em</span><span>&gt;</span><span>"This Page is Showing Working of the String Functions in PHP"</span><span>&lt;/</span><span>em</span><span>&gt;&lt;/</span><span>p</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"topnav"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>a</span><span> </span><span>href</span><span> =</span><span>"Assignment5.php"</span><span>&gt;</span><span>Home</span><span>&lt;/</span><span>a</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>a</span><span> </span><span>href</span><span> =</span><span>"source.html"</span><span>&gt;</span><span>Source Code</span><span>&lt;/</span><span>a</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>a</span><span> </span><span>href</span><span>=</span><span>""</span><span>&gt;</span><span>GitHub</span><span>&lt;/</span><span>a</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"row"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>h2</span><span>&gt;</span><span>Select The String Function</span><span>&lt;/</span><span>h2</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>hr</span><span> </span><span>width</span><span>=</span><span>75%</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>form</span><span> </span><span>action</span><span>=</span><span>""</span><span> </span><span>method</span><span>=</span><span>"POST"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"leftboxes"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Md5()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"md5"</span><span> </span><span>name</span><span>=</span><span>"md5"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Number_format()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"numberformat"</span><span> </span><span>name</span><span>=</span><span>"numberformat"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Ord()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"ord"</span><span> </span><span>name</span><span>=</span><span>"ord"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Rtrim()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"Rtrim"</span><span> </span><span>name</span><span>=</span><span>"Rtrim"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"midboxes"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Str_replace()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"strreplace"</span><span> </span><span>name</span><span>=</span><span>"strreplace"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Str_len()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"strlen"</span><span> </span><span>name</span><span>=</span><span>"strlen"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Strcasecmp()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"Strcasecmp"</span><span> </span><span>name</span><span>=</span><span>"Strcasecmp"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Strpos()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"strpos"</span><span> </span><span>name</span><span>=</span><span>"strpos"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"rightboxes"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Substr()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"substr"</span><span> </span><span>name</span><span>=</span><span>"substr"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Strlower()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"strlower"</span><span> </span><span>name</span><span>=</span><span>"strlower"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Bintohex()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"bintohex"</span><span> </span><span>name</span><span>=</span><span>"bintohex"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>input</span><span> </span><span>type</span><span>=</span><span>"submit"</span><span> </span><span>value</span><span>=</span><span>"Chop()"</span><span> &nbsp;</span><span>id</span><span>=</span><span>"chop"</span><span> </span><span>name</span><span>=</span><span>"chop"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;/</span><span>form</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"midrow"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>table</span><span> </span><span>cellpadding</span><span>=</span><span>10</span><span> </span><span>cellspacing</span><span>=</span><span>5</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;?php</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>$_SERVER</span><span>[</span><span>'REQUEST_METHOD'</span><span>]</span><span>==</span><span>'POST'</span><span>)</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'md5'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>md5</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'ord'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output1 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output1'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>ord</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'Rtrim'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output2 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output2'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>rtrim</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'strlower'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output3 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output3'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>strtolower</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'bintohex'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output4 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output4'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>bin2hex</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'strlen'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str id=str&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output5 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output5'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>strlen</span><span>(</span><span>$data</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'numberformat'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The Number :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=number name = num &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The Decimal :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=number name = num1 &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output6 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output6'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'num'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'num1'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>number_format</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'Strcasecmp'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name = st1 &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name = st2 &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output7 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>; &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output7'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'st1'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'st2'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data2</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>strcasecmp</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'chop'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name = st3 &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name = st4 &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output8 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output8'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'st3'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'st4'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>chop</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'strreplace'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$strreplace</span><span> </span><span>=</span><span> </span><span>true</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = ss1&gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =ss1 id=ss1 placeholder = search &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = ss2 &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =ss2 id=ss2 placeholder = replace &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = ss4 &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =ss3 id=ss4 placeholder = String &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = ss5 &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =ss4 id=ss5 placeholder = count &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output9 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output9'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'ss1'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'ss2'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data3</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'ss3'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data4</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'ss4'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data2</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data3</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data4</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>str_replace</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>,</span><span>$data3</span><span>,</span><span>$data4</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'substr'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = strr1 &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =strr1 id=strr1&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str12 &gt;Enter The Start Index :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str12 id=str12&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = str13 &gt;Enter The Length :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =str13 id=str13&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output10 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output10'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'strr1'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str12'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data3</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'str13'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data2</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data3</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>substr</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>,</span><span>$data3</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'strpos'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action= &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = trr1 &gt;Enter The String :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =trr1 id=trr1&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = tr12 &gt;Enter The Start Index :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =tr12 id=tr12&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for = tr13 &gt;Enter The Length :&lt;/label&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=text name =tr13 id=tr13&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type =submit name=output11 value=Output&gt;&lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'output11'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; </span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'trr1'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data2</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'tr12'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$data3</span><span> </span><span>=</span><span> </span><span>$_POST</span><span>[</span><span>'tr13'</span><span>];</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>empty</span><span>(</span><span>$data</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data2</span><span>) </span><span>||</span><span> </span><span>empty</span><span>(</span><span>$data3</span><span>)){</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt;Can Not Be Empty!&lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>else</span><span>{</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>$val</span><span> </span><span>=</span><span> </span><span>substr</span><span>(</span><span>$data</span><span>,</span><span>$data2</span><span>,</span><span>$data3</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;tr&gt;&lt;td&gt; Output : &lt;input type=button value=</span><span>$val</span><span> &lt;/td&gt;&lt;/tr&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>echo</span><span> </span><span>"&lt;form method=post action = &gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;&lt;input type=submit name = reset value=Reset &lt;/td&gt;&lt;/tr&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;"</span><span>;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>if</span><span>(</span><span>isset</span><span>(</span><span>$_POST</span><span>[</span><span>'reset'</span><span>]))</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span>header</span><span>(</span><span>"refresh:0; url=Assignment5.php"</span><span>);</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ?</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;/</span><span>table</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>br</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"footer"</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>h2</span><span>&gt;</span><span>Created By CodexRitik</span><span>&lt;/</span><span>h2</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; &nbsp; &nbsp; </span><span>&lt;</span><span>p</span><span>&gt;</span><span>@Copyright 2023</span><span>&lt;/</span><span>p</span><span>&gt;</span></div>
+            <div><span>&nbsp; &nbsp; </span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+            <div><span>&lt;/</span><span>body</span><span>&gt;</span></div>
+            <div><span>&lt;/</span><span>html</span><span>&gt;</span></div>
+            </div>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+    </div>
+    <div class="footer">
+        <h2>Created By CodexRitik</h2>
+        <p>@Copyright 2023</p>
+    </div>
+</body>
+</html>
